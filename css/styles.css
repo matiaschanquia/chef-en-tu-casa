@@ -1,0 +1,819 @@
+
+@font-face {
+  font-family: "Camaleon";
+  src: url("../fonts/CALLIG.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Felix";
+  src: url("../fonts/FELIX.ttf") format("truetype");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FFF;
+  background: linear-gradient(0deg, rgba(227,181,86,0.8) 0%, rgba(224,194,132,0.8) 60%, rgba(219,201,164,1) 100%);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.box-s {
+  box-sizing: border-box;
+}
+
+.display-ib {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+
+/* ###################### HEADER ###################### */
+
+
+#header {
+  width: 100%;
+  background-color: #A1A499;
+  border-bottom: solid black 1px;
+  padding: 0 10px 0 10px;
+  justify-content: center;
+}
+
+#container-header {
+  width: 85%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#logo-principal {
+  align-items: center;
+}
+
+#logo-principal img {
+  height: 64px;
+  transition: all .15s ease-in-out;
+}
+
+#logo-principal img:hover {
+  transition: all .15s ease-in-out;
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.name-page {
+  color: #fff;
+  font-family: 'Camaleon';
+  font-size: 1.5em;
+  white-space: nowrap; 
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #ffab00,
+    -2px -2px 2px #ffab00,
+    0px 2px 2px #ffab00,
+    2px 0px 2px #ffab00;
+  display: inline-block;
+  position: relative;
+  left: 3px;
+  transition: all .15s ease-in-out;
+}
+
+#logos-redes {
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+#logos-redes a {
+  display: inline-block;
+  width: 45px;
+  margin-left: 15px;
+}
+
+#logos-redes a img {
+  width: 100%;
+  transition: all .15s ease-in-out;
+}
+
+.logos-efect img:hover {
+  transition: all .15s ease-in-out;
+  box-shadow: 2.5px 2px 0px 0px rgba(69 69 69 / .6);
+  transform: scale(1.2);
+}
+
+@media (max-width: 1200px) {
+  #container-header {
+    width: 90%;
+  }
+  #logos-redes a {
+    width: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #container-header {
+    width: max-content;
+    justify-content: center;
+  }
+  #logo-principal img {
+    height: 55px;
+  }
+  #logo-principal h1 {
+    font-size: 1.4em;
+  }
+  #logos-redes {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  #container-header {
+    justify-content: center;
+  }
+  #logo-principal img {
+    height: 50px;
+  }
+  #logo-principal h1 {
+    font-size: 1.3em;
+  }
+}
+
+
+
+
+/* ###################### NAV ###################### */
+
+
+#nav {
+  width: 100%;
+  justify-content: center;
+  background-color: #9C9583ee;
+  border-bottom: solid black 1px;
+  padding: 10px 0;
+  box-shadow: 0px -2px 1px 3px rgba(69, 69, 69, 0.1) inset;
+}
+
+#nav ol {
+  width: 45%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav ol img {
+  height: 20px;
+  position: relative;
+  top: 2.5px;
+  right: 2px;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));
+}
+
+#nav ol li {
+  display: inline-block;
+  text-align: center;
+}
+
+#nav a {
+  flex: 1;
+  color: #ffab00;
+  text-shadow: 2px 1px 1px #000;
+  padding: 1.5px 4px;
+  margin: 2px;
+  font-weight: 600;
+  transition: all .15s ease-in-out;
+}
+
+#nav a:hover {
+  transition: all .15s ease-in-out;
+  border-bottom: #ffaa00cd solid 4px;
+}
+
+#nav a:active {
+  color: #ffab00;
+  text-shadow: 1px 1px 1px rgba(0 0 0 / .75);
+}
+
+@media (max-width: 768px) {
+  #nav ol {
+    width: 60%;
+  }
+}
+
+@media (max-width: 575px) {
+  #nav ol {
+    width: 80%;
+  }
+}
+
+
+/* ###################### INICIO ###################### */
+
+
+#presentation-home {
+  width: 100%;
+  height: 82vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: -2;
+}
+
+#presentation-home video {
+  height: 100%;
+  position: absolute;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+#presentation-text {
+  color: #fff;
+  font-family: "Felix";
+  max-width: 770px;
+  height: 80px;
+  margin: 0 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#presentation-text h2 {
+  color: #ffab00;
+  text-shadow: 2px 1px 3px #000000;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+#presentation-text p {
+  text-shadow: 2px 1px 2px #000000;
+  font-size: 1em;
+}
+
+#section-home-app {
+  display: none;
+  max-width: max-content;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  white-space: pre-wrap;
+  color: #fff;
+  margin: 20px auto;
+  padding: 15px;
+  padding-bottom: 0;
+  border: black solid 1px;
+  text-shadow: 2px 1px 1px rgb(0, 0, 0);
+  align-items: center;
+  background-color: #026873;
+  background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+                    linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+                    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+                    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
+}
+
+#section-home-app span {
+  font-size: 0.8em;
+}
+
+.img-phones {
+  align-items: center;
+}
+
+.img-phones {
+  filter: drop-shadow(2px 2px 0px rgb(255, 255, 255));
+}
+
+.img-phones img:nth-child(1) {
+  height: 52px;
+  width: 50px;
+}
+
+.img-phones img:nth-child(2) {
+  width: 100px;
+}
+
+.titulos-home {
+  text-align: center;
+  color: #FFAB00;
+  font-size: 1.625em;
+  text-decoration: underline;
+  text-shadow: 2px 2px 1px black;
+  margin-bottom: 10px;
+}
+
+#cocineros-home {
+  width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cocineroX {
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 350px;
+  overflow: hidden;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.cocineroX h3 {
+  color: #001154;
+  text-decoration: underline;
+}
+
+.cocineroX img {
+  margin: 20px;
+  border: rgb(0, 0, 0) solid 1px;
+}
+
+.cocineroX a {
+  width: max-content;
+}
+
+.cocineroX a p {
+  display: inline-block;
+  color: #001154;
+  padding: 3px 12px;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  border: #001154 solid 1px;
+  transition: .18s;
+}
+
+.cocineroX p:hover {
+  color: #FFAB00;
+  border: #FFAB00 solid 1px;
+}
+
+@media (max-width: 768px) {
+  #presentation-text h2 {
+    font-size: 1.7em;
+  }
+  #presentation-text p {
+    font-size: 0.9em;
+  }
+  .titulos-home {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 575px) {
+  #presentation-text {
+    margin: 0 10px;
+    height: 130px;
+  }
+  #section-home-app {
+    display: flex;
+  }
+}
+
+
+/* ###################### MAIN ###################### */
+
+
+#main {
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 15px 0 27px 0;
+}
+
+
+/* ###################### RECETAS ###################### */
+
+
+#recetas {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  flex: 1;
+  position: relative;
+}
+
+.recetaX {
+  /* border: #ffab00 solid 1px; */
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transition: .5s;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 1em;
+  border: black solid 1px;
+}
+
+.recetaX:hover {
+  transform: scale(1.2);
+  border-radius: 0;
+}
+
+.recetaX h2 {
+  font-family: "Felix";
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-shadow: 2px 1px 1px rgb(0, 0, 0);
+  text-align: center;
+}
+
+.recetaX:nth-child(1) {
+  background: rgb(17, 17, 17) url(../img/tortilla01.jpg) no-repeat ;
+  background-size: cover;
+}
+
+.recetaX:nth-child(2) {
+  background: rgb(17, 17, 17) url(../img/estofado-carne.jpg) no-repeat ;
+  background-size: cover;
+}
+
+.recetaX:nth-child(3) {
+  background: rgb(17, 17, 17) url(../img/empanada.jpg) no-repeat ;
+  background-size: cover;
+}
+
+.recetaX:nth-child(4) {
+  background: rgb(17, 17, 17) url(../img/pan.jpg) no-repeat ;
+  background-size: cover;
+}
+
+.recetaX:nth-child(5) {
+  background: rgb(17, 17, 17) url(../img/nioquis.jpg) no-repeat ;
+  background-size: cover;
+}
+
+.recetaX:nth-child(6) {
+  background: rgb(17, 17, 17) url(../img/canelones.jpg) no-repeat ;
+  background-size: cover;
+}
+
+
+/* ###################### SECTION ###################### */
+
+
+#section {
+  background-color: #CADBC8;
+  border: rgba(69 69 69 / .8) 1px solid;
+  margin: 0 10px 15px;
+  padding: 35px;
+  flex: 3;
+}
+
+#presentacion {
+  text-align: center;
+}
+
+#presentacion h1 {
+  color: #FFAB00;
+  font-size: 1.625em;
+  text-decoration: underline;
+  text-shadow: 2px 2px 1px black;
+}
+
+#presentacion h3 {
+  color: #000;
+  font-size: 1.125em;
+  margin: 1% 0 3% 0;
+  font-weight: 500;
+}
+
+#img-des {
+  width: 100%;
+}
+
+#img-des::after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#img-des img {
+  width: 55%;
+  float: left;
+  box-shadow: 4px 4px 7px 2px rgba(69 69 69 / .8);
+  margin: 1.5%;
+}
+
+#img-des #descripcion {
+  text-align: center;
+  margin: auto 0;
+}
+
+#img-des #descripcion p {
+  text-align: justify;
+}
+
+#div-center {
+  width: 85%;
+  margin: 2% auto;
+  justify-content: space-between;
+}
+
+#div-center audio {
+  margin: auto 0 0 0;
+  width: 50%;
+  height: 42px;
+  border: 2px #FFAB00 solid;
+  background-color: #f1f3f4;
+  box-shadow: 4px 3px 6px 1px rgba(69 69 69 / .8);
+  border-radius: 1em;
+}
+
+#div-center a {
+  width: 40%;
+}
+
+#div-center a img{
+  width: 100%;
+  transition: all .15s ease-in-out;
+}
+
+#div-center a img:hover {
+  transition: all .15s ease-in-out;
+  transform: scale(1.1);
+}
+
+
+.sub-subtitulo {
+  color: #ffbc38;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+#margin-ul {
+  margin: 0 0 2% 0;
+  margin-left: 15px;
+}
+
+#margin-ol {
+  margin-left: 15px;
+}
+
+#video-ubic {
+  width: 100%;
+  margin: 2% auto;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#video-ubic iframe {
+  width: 75%;
+  height: 350px;
+  box-shadow: 4px 4px 7px 2px rgba(69 69 69 / .8);
+}
+
+#video-ubic a {
+  color: #FFAB00;
+  text-shadow: 1px 0px 1px black,
+    -1px 0px 1px black,
+    0px 1px 1px black,
+    0px -1px 1px black;
+  transition: all .20s ease-in-out;
+  margin-top: 4.5%;
+}
+
+#video-ubic a:hover {
+  transition: all .20s ease-in-out;
+  transform: scale(1.030);
+}
+
+#video-ubic a:active {
+  transition: all .20s ease-in-out;
+  text-shadow: none;
+}
+
+
+/* ###################### ASIDE ###################### */
+
+
+#aside {
+  background-color: #B0BBBF;
+  border: rgba(69 69 69 / .8) 1px solid;
+  margin: 0 10px 15px;
+  padding: 35px;
+  flex: 1;
+}
+
+#cocinero-info {
+  text-align: center;
+}
+
+.divisor-horizontal {
+  width: 80%;
+  height: 0px;
+  border-top: 1px solid rgba(132 132 132 / 1);
+  margin: 15px auto;
+}
+
+#cocinero-info img {
+  width: 80%;
+  box-shadow: 4px 4px 7px 2px rgba(69 69 69 / .8);
+}
+
+#cocinero-info h3 {
+  color: #FFF;
+  text-shadow: 3px 2px 0px #ffab00,
+    4px 3px 2px black;
+}
+
+#cocinero-info h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+#cocinero-info a h4 {
+  color: #103cb5;
+}
+
+#cocinero-info a h4:hover {
+  text-decoration: underline;
+}
+
+#cocinero-info h5 {
+  font-size: 0.9375em;
+  font-weight: 500;
+  text-align: justify;
+}
+
+
+/* Media queris de main, section y aside */
+
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column;
+  }
+  #presentacion h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 575px) {
+  #presentacion h1 {
+    font-size: 1.4em;
+  }
+}
+
+
+/* ###################### FOOTER ###################### */
+
+
+#footer {
+  background-color: #26272b;
+  height: 30vh;
+  clear: both;
+  width: 100%;
+  padding: 25px;
+}
+
+#icono-pag .logo-pag {
+  width: 58px;
+}
+
+#icono-pag {
+  height: 0;
+  position: relative;
+  bottom: 52px;
+}
+
+#copyright {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#copyright p {
+  font-family: "Felix";
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  color: #6F6F6F;
+  text-align: center;
+}
+
+#copyright a {
+  text-decoration: none;
+  color: #9c9c9c;
+}
+
+#copyright a:hover {
+  text-decoration: none;
+  color: #c2c0c0;
+}
+
+#logos-redes-footer {
+  width: 230px;
+  justify-content: space-between;
+}
+
+#logos-redes-footer img {
+  width: 40px;
+  transition: all .15s ease-in-out;
+}
+
+
+/* ###################### CONTACTO ###################### */
+
+
+#contact h1,
+#contact h4 {
+  text-align: center;
+  margin: 0 0 2% 0;
+}
+
+#contact h4 {
+  font-weight: 500;
+}
+
+#form {
+  width: 80%;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto 3%;
+}
+
+#flex-space {
+  width: 80%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+label {
+  color: #000;
+}
+
+.rows {
+  width: 100%;
+  display: inline-block;
+}
+
+.two-col {
+  list-style: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.two-col li {
+  display: inline-block;
+}
+
+.text-input {
+  font-size: 1.0625em;
+  width: 216px;
+  height: 25px;
+}
+
+.rows textarea {
+  min-width: 200px;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 180px;
+  font-size: 1.0625em;
+  font-family: inherit;
+  padding: 5px;
+}
+
+select {
+  font-size: 1em;
+  width: 220px;
+  height: 28px;
+}
+
+.boton-enviar {
+  font-size: 1.0625em;
+  width: 100px;
+  height: 30px;
+  background-color: #ffab00;
+  transition: .2s;
+}
+
+.boton-enviar:hover {
+  background-color: #db9200;
+  transition: .3s;
+}
+
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column;
+  }
+}

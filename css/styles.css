@@ -409,17 +409,18 @@ a {
   width: 300px;
   height: 300px;
   margin: 20px;
-  transition: .5s;
+  transition: 200ms;
+  transition-delay: 150ms;
   justify-content: center;
   align-items: center;
   background-color: black;
-  border-radius: 1em;
+  border-radius: 50%;
   border: black solid 1px;
 }
 
 .recetaX:hover {
   transform: scale(1.2);
-  border-radius: 0;
+  border-radius: 15%;
 }
 
 .recetaX h2 {
@@ -428,6 +429,8 @@ a {
   font-size: 20px;
   text-shadow: 2px 1px 1px rgb(0, 0, 0);
   text-align: center;
+  transition: 400ms;
+  transition-delay: 300ms;
 }
 
 .recetaX:nth-child(1) {
@@ -458,6 +461,26 @@ a {
 .recetaX:nth-child(6) {
   background: rgb(17, 17, 17) url(../img/canelones.jpg) no-repeat ;
   background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .recetaX {
+    width: 270px;
+    height: 270px;
+  }
+  .recetaX h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .recetaX {
+    width: 230px;
+    height: 230px;
+  }
+  .recetaX h2 {
+    font-size: 16px;
+  }
 }
 
 

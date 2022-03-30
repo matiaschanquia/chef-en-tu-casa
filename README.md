@@ -2,6 +2,8 @@
 
 [Link del proyecto](https://matiaschanquia.github.io/chef-en-tu-casa/).
 
+Se ha agregado el uso de JavaScript internamente como externamente mediante el uso de alert. (TP 8)
+
 Se ha agregado componentes de Bootstrap (card) que a su vez se aplica el sistema de grillado de Bootstrap. (TP 7)
 
 Este proyecto es una nueva versión del repositorio chef-en-tu-casa-recetas. Aqui se ha hecho un sitio web mas avanzado (TP 6)

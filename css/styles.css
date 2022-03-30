@@ -27,6 +27,17 @@ a {
   color: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: normal;
+  font-weight: bold;
+
+}
+
+ol, ul {
+  padding: 0;
+}
+
 .box-s {
   box-sizing: border-box;
 }
@@ -169,6 +180,7 @@ a {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
 }
 
 #nav ol img {
@@ -387,8 +399,6 @@ a {
 
 #main {
   width: 100%;
-  flex-direction: row;
-  align-items: flex-start;
   margin: 15px 0 27px 0;
 }
 
@@ -490,9 +500,8 @@ a {
 #section {
   background-color: #CADBC8;
   border: rgba(69 69 69 / .8) 1px solid;
-  margin: 0 10px 15px;
+  margin: 0 0 15px;
   padding: 35px;
-  flex: 3;
 }
 
 #presentacion {
@@ -629,9 +638,8 @@ a {
 #aside {
   background-color: #B0BBBF;
   border: rgba(69 69 69 / .8) 1px solid;
-  margin: 0 10px 15px;
-  padding: 35px;
-  flex: 1;
+  margin: 0 0 15px;
+  padding: 15px;
 }
 
 #cocinero-info {
@@ -839,4 +847,16 @@ select {
   #main {
     flex-direction: column;
   }
+}
+
+
+.card {
+  height: 420px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
